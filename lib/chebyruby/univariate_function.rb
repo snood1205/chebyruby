@@ -18,4 +18,5 @@ class ChebyRuby::UnivariateFunction
   def value(x)
     func.call(x.to_f)
   end
+
 end
