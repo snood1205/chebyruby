@@ -17,7 +17,7 @@ class Expression
     a = []
     nested?[:left] ? a << left.vars : a << left.x
     nested?[:right] ? a << right.vars : a << right.x
-    a.flatten
+    (a.flatten rescue a).select{|i| String === i}.uniq
   end
 
   def nested?
@@ -39,5 +39,9 @@ class Expression
   end
 
   def to_func
+    if a.vars.size == 1
+      blk = ->(intvar) {eval(to_s.gsub(vars[0],'intvar'))}
+      UnivariateFunction.new(&blk)
+    end
   end
 end
