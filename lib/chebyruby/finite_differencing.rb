@@ -27,7 +27,7 @@ class ChebyRuby::FiniteDifferencing
 
   # This does forward finite differencing. 
   # The formula being used is:
-  # <pre> Sum[(-1)^i * Binom(n i) * f(x + (n-i) * h), {i, 0, n}]/(h^n) </pre>
+  # <pre> Sum[(-1)^i * Binom(n i) * f(x + (n-i) * h), (i, 0, n)]/(h^n) </pre>
   # 
   # @param [Numeric] x the value at which to find the derivative
   # @param [Numeric] h the value to use for the differencing (generally 
@@ -44,7 +44,7 @@ class ChebyRuby::FiniteDifferencing
 
   # This does backward finite differencing. 
   # The formula being used is:
-  # <pre> Sum[(-1)^i * Binom(n i) * f(x - i*h), {i, 0, n}]/(h^n) </pre>
+  # <pre> Sum[(-1)^i * Binom(n i) * f(x - i*h), (i, 0, n)]/(h^n) </pre>
   # 
   # @param [Numeric] x the value at which to find the derivative
   # @param [Numeric] h the value to use for the differencing (generally 
@@ -61,7 +61,7 @@ class ChebyRuby::FiniteDifferencing
 
   # This does central finite differencing. 
   # The formula being used is:
-  # <pre> Sum[(-1)^i * Binom(n i) * f(x + (n/2-i) * h), {i, 0, n}]/(h^n) </pre>
+  # <pre> Sum[(-1)^i * Binom(n i) * f(x + (n/2-i) * h), (i, 0, n)]/(h^n) </pre>
   # 
   # @param [Numeric] x the value at which to find the derivative
   # @param [Numeric] h the value to use for the differencing (generally 
