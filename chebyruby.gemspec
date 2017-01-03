@@ -8,13 +8,13 @@ calculus. The future of this gem might entail expansion towards the
 world of matrix analysis and multivariate calculus, but the primary
 goal for the time being is univariate numerical calculus.
 EOF
-  s.version = '0.1.1'
+  s.version = '0.1.2'
   s.author = 'Eli Sadoff'
   s.email = 'snood1205@gmail.com'
   s.license = 'MIT'
   s.platform = Gem::Platform::RUBY
-  s.required_rubygems_version = '>=1.9.3'
-  s.date = '2016-12-15'
+  s.required_ruby_version = '>=1.9.3'
+  s.date = '2017-01-03'
   s.files = %w(Rakefile lib/chebyruby.rb bin/chebyruby) + Dir['lib/chebyruby/*.rb']
   s.files.concat Dir['**/*.rdoc']
   s.test_files = Dir['test/test_*.rb']
